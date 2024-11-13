@@ -12,7 +12,7 @@ public class Question {
 	}
 	
 	public void displayPrompt() {
-		System.out.println(this.prompt + "(" + this.points + " points)");
+		System.out.println(this.prompt + " (" + this.points + " points)");
 	}
 	
 	public int checkAnswer(String givenAnswer) {
@@ -23,6 +23,10 @@ public class Question {
 		}
 	}
 	
+	public String getPrompt() {
+		return this.prompt;
+	}
+
 	public int getPoints() {
 		return this.points;
 	}
@@ -34,7 +38,7 @@ public class Question {
 	public static void main(String[] args) {
 		Question q = new Question("What number studio is this?", "8", 2);
 		q.displayPrompt();
-		System.out.println(q.checkAnswer("hi"));
+		System.out.println(q.checkAnswer("3"));
 		System.out.println(q.checkAnswer("8"));
 	}
 }
